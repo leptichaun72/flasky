@@ -7,7 +7,8 @@ doodaadee = 10002
 @app.route('/')
 def index():
     print(f'mah date: {doodaadee}')
-    return render_template('index.html', foo=doodaadee)
+    #return render_template('index.html', foo=doodaadee)
+    return render_template('index.html', my_tasks=tasks)
 
 
 if __name__ == "__main__":

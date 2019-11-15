@@ -7,4 +7,8 @@ i like tomato {{ foo }}
 onclick="return confirm('DANGEROUS OPERATION!!!\n\nAre you sure you want to Delete? {{ foo }}')">
 go to yahoo!</a>
 in my monologue
+<h1>some things</h1>
+{% for it in my_tasks %}
+<p>{{ it.content }}</p>
+{% endfor %}
 {% endblock %}
