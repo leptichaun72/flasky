@@ -8,7 +8,9 @@ doodaadee = 10002
 def index():
     print(f'mah date: {doodaadee}')
     return render_template('index.html', foo=doodaadee)
-    
 
-app.run ()
+
+if __name__ == "__main__":
+    app.run()
+
 
