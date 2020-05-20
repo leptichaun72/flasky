@@ -16,8 +16,11 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 
+// a route
 @app.route('/')
-def index():
+// the controller action
+def main_page():
+    pass //placeholder
     print(f'mah date: {doodaadee}')
     tasks = Todo.query.order_by(Todo.date_created).all()
     return render_template('index.html', my_tasks=tasks)
