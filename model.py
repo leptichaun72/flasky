@@ -1,16 +1,15 @@
 import os
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
-# database_file = "sqlite:///{}".format(os.path.join(project_dir, "bookdatabase.db"))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "proj.db"))
+
+doodaadee = 10002
 
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
  
 app = Flask(__name__)
-doodaadee = 10002
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///proj.db'
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 
 db = SQLAlchemy(app)
