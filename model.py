@@ -1,12 +1,28 @@
+import os
+
+project_dir = os.path.dirname(os.path.abspath(__file__))
+database_file = "sqlite:///{}".format(os.path.join(project_dir, "bookdatabase.db"))
+
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
  
 app = Flask(__name__)
 doodaadee = 10002
+app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///proj.db'
+
 db = SQLAlchemy(app)
+
+class Example(db.Model):
+	__tablename__ = 'example'
+	id = db.Column('id', db.Integer, primary_key=True)
+	data = db.Column('data', db.Unicode)
+
+	def __init__(self, id, data):
+		self.id = id
+		self.data = data
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
