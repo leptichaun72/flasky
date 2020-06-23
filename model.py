@@ -20,7 +20,7 @@ class Animal(db.Model):
 
 
 class Example(db.Model):
-	__tablename__ = 'example'
+	__tablename__ = 'exampledude'
 	id = db.Column('id', db.Integer, primary_key=True)
 	data = db.Column('data', db.Unicode)
 
@@ -47,6 +47,5 @@ def main_page():
     return render_template('index.html', my_tasks=tasks)
 
 if __name__ == "__main__":
-    app.run()
-
+    app.run(debug=True)
 
