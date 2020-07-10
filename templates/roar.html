@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am a template Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <h1>ANIMAL FACTS</h1>
+    <em>This is the kind of living organism I am - {{ creature }}</em>
+    <img src="/static/sid.jpg.1" alt="Sid">
+    <img src="{{ url_for('static', filename='airplane-sunset.jpg') }}" alt="airplane">
+</body>
+</html>
