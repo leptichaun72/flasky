@@ -60,6 +60,10 @@ def login():
 def dashboard(name):
    return 'welcome %s' % name
 
+@app.route('/bootstrap')
+def bootstrap():
+    return app.send_static_file('test-bootstrap.html')
+
 #########
 # OTHER
 #########
